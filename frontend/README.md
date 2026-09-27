@@ -26,22 +26,21 @@ npm install
 
 ## Running the apps in dev mode
 
-From the **repository root**, the launcher scripts (these preflight your
-environment, install dependencies, and free the dev port first):
+From the **repository root**, start the frontend and Tauri desktop app together:
 
 ```bash
-./script/website/unix_frontend_dev.sh           # artcraft-website (marketing site), port 4200
-./script/website/unix_frontend_webapp_dev.sh    # artcraft-webapp (user dashboard), port 4201
-./script/artcraft/unix_frontend_dev.sh          # artcraft (Tauri app frontend), port 5173
+./script/unix_dev.sh
 ```
 
-Or directly from this directory:
+The launcher finds and binds a free port starting at 5183, then gives Tauri the
+same URL. Set `ARTCRAFTX_DEV_PORT` to change the starting port. Vite handles
+frontend live reload; Tauri watches Rust workspace dependencies and rebuilds and
+restarts the app on edits. Ctrl-C stops both. See the repository README for details.
+
+For just the frontend, directly from this directory:
 
 ```bash
-nx dev artcraft-website
-nx dev artcraft-webapp
-nx dev artcraft        # NB: the Tauri app also needs the Rust dev server running
-nx dev editor2d
+npx nx dev artcraft
 ```
 
 ## Building
