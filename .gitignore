@@ -1,20 +1,9 @@
-*~
-external/
-
-# Secrets are BAD!
-*secret*sh
-.env
-.env-secrets
-*-secrets.env
-secrets/
-
-# Rust build output
-/target
-
-# Editors / OS
+target/
+Cargo.lock
+**/*.rs.bk
+*.swp
 .DS_Store
-.idea/
-.vscode/
 
-# Python virtual envs (named by convention)
-venv/
+# Demonstration artifacts
+/brag/
+brag/
