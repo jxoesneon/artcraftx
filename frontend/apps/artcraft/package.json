@@ -36,7 +36,7 @@
     "deep-equal": "^2.2.3",
     "detect-gpu": "^5.0.38",
     "lucide-react": "^0.512.0",
-    "nx": "^21.1.1",
+    "nx": "^23.3.0",
     "posthog-js": "^1.141.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
